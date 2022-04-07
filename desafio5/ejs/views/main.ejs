@@ -1,0 +1,31 @@
+<head>
+    <%- include('./layouts/main') -%>
+</head>
+<body>
+    <h3>Lista de productos</h3>
+    <button class="btn btn-success" onclick="window.location='/'">Crear producto</button>
+    <% if (locals.productos) { %>
+    <table class="table table-dark">
+        <head>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Thumbnail</th>
+            </tr>
+        </head>
+        <body>
+            <% productos.forEach(function(producto) { %>
+            <tr>
+                <td><%=producto.id%></td>
+                <td><%=producto.title%></td>
+                <td><%=producto.price%></td>
+                <td><img src="<%=producto.thumbnail%>" width="30" /></td>
+            </tr>
+            <% }) %>
+        </body>
+    </table>
+    <% } else if(locals.error) {%>
+    <div class="alert"><%=error%></div>
+    <% } %>
+</body>
