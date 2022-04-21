@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Jabon Solido Natural",
+        "price": "800",
+        "thumbnail": "https://i.pinimg.com/originals/12/e7/c5/12e7c5126d992244719b7070788c5b17.jpg",
+        "id": 1
+    },
+    {
+        "title": "Shampoo",
+        "price": "800",
+        "thumbnail": "https://i.pinimg.com/originals/12/e7/c5/12e7c5126d992244719b7070788c5b17.jpg",
+        "id": 2
+    },
+    {
+        "title": "Jabon Solido Aromatico",
+        "price": "800",
+        "thumbnail": "https://i.pinimg.com/originals/12/e7/c5/12e7c5126d992244719b7070788c5b17.jpg",
+        "id": 3
+    },
+    {
+        "title": "Jabon",
+        "price": "1300",
+        "thumbnail": "https://eacnur.org/blog/wp-content/uploads/2016/07/Hacer-jab%C3%B3n-casero-1-823x400.jpg",
+        "id": 4
+    },
+    {
+        "title": "Jabon natural",
+        "price": "1400",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzA6jsT4X-NGZ_CliFYrZ0jF1kZQSM3B74lnxoIOtRQ4NApjWXG30FnGkSnulFWCgMsQA&usqp=CAU",
+        "id": 5
+    },
+    {
+        "stock": "15",
+        "id": 6,
+        "timestamp": 1650551187122,
+        "codigo": "1650551187122/5",
+        "title": "Shampoo Solido",
+        "price": "600",
+        "thumbnail": "https://www.lush.cl/wp-content/uploads/2021/02/LUSH-Champu-solido-1-e1613131850432.jpg",
+        "descripcion": "Shampoo Solido Natural sin aditivos"
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 2,
+        "timestamp": 1650564175825,
+        "productos": [
+            {
+                "title": "Shampoo Solido",
+                "price": "600",
+                "thumbnail": "https://www.lush.cl/wp-content/uploads/2021/02/LUSH-Champu-solido-1-e1613131850432.jpg",
+                "descripcion": "Shampoo Solido Natural sin aditivos",
+                "stock": "15",
+                "id": 2,
+                "timestamp": 1650564743572,
+                "codigo": "1650564743572/1"
+            },
+            {
+                "title": "FLASH",
+                "price": "1600",
+                "thumbnail": "https://www.ecccomics.com/content/productos/1575/Flash_El-origen-de-Flash.jpg",
+                "id": 1
+            }
+        ]
+    }
+]
