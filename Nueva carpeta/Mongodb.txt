@@ -1,0 +1,617 @@
+> mongod --dbpath "C:\Users\Usuario\Desktop\programación\backend-coder\desafios\desafio9"
+
+------------------------------------------------------------------------------
+>mongo
+
+>use ecommerce
+switched to db ecommerce
+--------------------------1)Agregar 10 documentos----------------------------
+> db.productos.insertMany([
+... {title: "Jabon solido",
+... thumbnail: "https://nurbotanicals.com/67-large_default/n05-cinnamon-argan-.jpg",
+... price: 120},
+... {title: "Jabon liquido",
+... thumbnail: "https://elblogverde.com/wp-content/uploads/2016/06/como-hacer-jabon-liquido-galeria-2.jpg",
+... price: 580},
+... {title: "Shampoo Solido",
+... thumbnail: "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2020/07/10/shampoo-solido.jpg?itok=Hs14Y5ry",
+... price: 900},
+... {title: "Acondicionador Solido",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg",
+... price: 1280},
+... {title: "Desodorante natural",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg",
+... price: 1700},
+... {title: "Crema para la ducha",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg",
+... price: 2300},
+... {title: "Serum Facial",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg",
+... price: 2860},
+... {title: "Crema Gel Hidratante",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg",
+... price: 3350},
+... {title: "Bruma",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg",
+... price: 4320},
+... {title: "Leche de Limpieza",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg",
+... price: 4990}])
+
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62730bb8e3652675d0b57de3"),
+                ObjectId("62730bb8e3652675d0b57de4"),
+                ObjectId("62730bb8e3652675d0b57de5"),
+                ObjectId("62730bb8e3652675d0b57de6"),
+                ObjectId("62730bb8e3652675d0b57de7"),
+                ObjectId("62730bb8e3652675d0b57de8"),
+                ObjectId("62730bb8e3652675d0b57de9"),
+                ObjectId("62730bb8e3652675d0b57dea"),
+                ObjectId("62730bb8e3652675d0b57deb"),
+                ObjectId("62730bb8e3652675d0b57dec")
+        ]
+}
+
+> db.mensajes.insertMany([
+... {userId: 1,
+... username: "Paula",
+... message: "Hola, quisiera hacer una consulta"},
+... {userId: 2,
+... ... username: "Santi",
+... ... message: "Hola, Como estas?"},
+... {userId: 3,
+... username: "Umi",
+... message: "Hola"},
+... {userId: 4,
+... username: "Kira",
+... message: "Hola, todo bien"},
+... {userId: 5,
+... username: "Andrea",
+... message: "Cual es su consulta"},
+... {userId: 6,
+... username: "Lucas",
+... message: "mensaje"},
+... {userId: 7,
+... username: "Maka",
+... message: "mensaje"},
+... {userId: 8,
+... username: "Tami",
+... message: "mensaje"},
+... {userId: 9,
+... username: "Juan",
+... message: "mensaje"},
+... {userId: 10,
+... username: "Zeus",
+... message: "mensaje"}])
+
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62730d34e3652675d0b57ded"),
+                ObjectId("62730d34e3652675d0b57dee"),
+                ObjectId("62730d34e3652675d0b57def"),
+                ObjectId("62730d34e3652675d0b57df0"),
+                ObjectId("62730d34e3652675d0b57df1"),
+                ObjectId("62730d34e3652675d0b57df2"),
+                ObjectId("62730d34e3652675d0b57df3"),
+                ObjectId("62730d34e3652675d0b57df4"),
+                ObjectId("62730d34e3652675d0b57df5"),
+                ObjectId("62730d34e3652675d0b57df6")
+        ]
+}
+
+-----------------------3)Listar todos los documentos---------------------------------
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de3"),
+        "title" : "Jabon solido",
+        "thumbnail" : "https://nurbotanicals.com/67-large_default/n05-cinnamon-argan-.jpg",
+        "price" : 120
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de4"),
+        "title" : "Jabon liquido",
+        "thumbnail" : "https://elblogverde.com/wp-content/uploads/2016/06/como-hacer-jabon-liquido-galeria-2.jpg",
+        "price" : 580
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de5"),
+        "title" : "Shampoo Solido",
+        "thumbnail" : "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2020/07/10/shampoo-solido.jpg?itok=Hs14Y5ry",
+        "price" : 900
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de6"),
+        "title" : "Acondicionador Solido",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg",
+        "price" : 1280
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de7"),
+        "title" : "Desodorante natural",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg",
+        "price" : 1700
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de8"),
+        "title" : "Crema para la ducha",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg",
+        "price" : 2300
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de9"),
+        "title" : "Serum Facial",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg",
+        "price" : 2860
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dea"),
+        "title" : "Crema Gel Hidratante",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg",
+        "price" : 3350
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57deb"),
+        "title" : "Bruma",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg",
+        "price" : 4320
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dec"),
+        "title" : "Leche de Limpieza",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg",
+        "price" : 4990
+}
+
+> db.mensajes.find().pretty()
+{
+        "_id" : ObjectId("62730d34e3652675d0b57ded"),
+        "userId" : 1,
+        "username" : "Paula",
+        "message" : "Hola, quisiera hacer una consulta"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57dee"),
+        "userId" : 2,
+        "username" : "Santi",
+        "message" : "Hola, Como estas?"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57def"),
+        "userId" : 3,
+        "username" : "Umi",
+        "message" : "Hola"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df0"),
+        "userId" : 4,
+        "username" : "Kira",
+        "message" : "Hola, todo bien"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df1"),
+        "userId" : 5,
+        "username" : "Andrea",
+        "message" : "Cual es su consulta"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df2"),
+        "userId" : 6,
+        "username" : "Lucas",
+        "message" : "mensaje"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df3"),
+        "userId" : 7,
+        "username" : "Maka",
+        "message" : "mensaje"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df4"),
+        "userId" : 8,
+        "username" : "Tami",
+        "message" : "mensaje"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df5"),
+        "userId" : 9,
+        "username" : "Juan",
+        "message" : "mensaje"
+}
+{
+        "_id" : ObjectId("62730d34e3652675d0b57df6"),
+        "userId" : 10,
+        "username" : "Zeus",
+        "message" : "mensaje"
+}
+
+-----------------------4)Mostrar la cantidad de documentos------------------------
+> db.productos.estimatedDocumentCount()
+10
+
+> db.mensajes.estimatedDocumentCount()
+10
+----------------------------5--------------------------------------------------
+>db.productos.insert({title: "Jabonera",
+... thumbnail: "https://www.ruhnatural.com/wp-content/uploads/2021/05/jabonera-redonda-x1-2-min-600x600.jpg",
+... price: 650})
+WriteResult({ "nInserted" : 1 })
+
+
+> db.productos.find({price: {$lt: 1000}})
+{ "_id" : ObjectId("62730bb8e3652675d0b57de3"), "title" : "Jabon solido", "thumbnail" : "https://nurbotanicals.com/67-large_default/n05-cinnamon-argan-.jpg", "price" : 120 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57de4"), "title" : "Jabon liquido", "thumbnail" : "https://elblogverde.com/wp-content/uploads/2016/06/como-hacer-jabon-liquido-galeria-2.jpg", "price" : 580 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57de5"), "title" : "Shampoo Solido", "thumbnail" : "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2020/07/10/shampoo-solido.jpg?itok=Hs14Y5ry", "price" : 900 }
+{ "_id" : ObjectId("62730f0be3652675d0b57df7"), "title" : "Jabonera", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/05/jabonera-redonda-x1-2-min-600x600.jpg", "price" : 650 }
+
+
+> db.productos.find({price: {$gte: 1000, $lte: 3000}}).pretty()
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de6"),
+        "title" : "Acondicionador Solido",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg",
+        "price" : 1280
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de7"),
+        "title" : "Desodorante natural",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg",
+        "price" : 1700
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de8"),
+        "title" : "Crema para la ducha",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg",
+        "price" : 2300
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de9"),
+        "title" : "Serum Facial",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg",
+        "price" : 2860
+}
+
+
+> db.productos.find({price: {$gt:3000}}).pretty()
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dea"),
+        "title" : "Crema Gel Hidratante",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg",
+        "price" : 3350
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57deb"),
+        "title" : "Bruma",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg",
+        "price" : 4320
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dec"),
+        "title" : "Leche de Limpieza",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg",
+        "price" : 4990
+}
+
+
+> db.productos.find().sort({price: 1}).skip(2).limit(1)
+{ "_id" : ObjectId("62730f0be3652675d0b57df7"), "title" : "Jabonera", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/05/jabonera-redonda-x1-2-min-600x600.jpg", "price" : 650 }
+
+
+> db.productos.updateMany({},{$set: {stock: 100}})
+{ "acknowledged" : true, "matchedCount" : 11, "modifiedCount" : 11 }
+
+
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de3"),
+        "title" : "Jabon solido",
+        "thumbnail" : "https://nurbotanicals.com/67-large_default/n05-cinnamon-argan-.jpg",
+        "price" : 120,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de4"),
+        "title" : "Jabon liquido",
+        "thumbnail" : "https://elblogverde.com/wp-content/uploads/2016/06/como-hacer-jabon-liquido-galeria-2.jpg",
+        "price" : 580,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de5"),
+        "title" : "Shampoo Solido",
+        "thumbnail" : "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2020/07/10/shampoo-solido.jpg?itok=Hs14Y5ry",
+        "price" : 900,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de6"),
+        "title" : "Acondicionador Solido",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg",
+        "price" : 1280,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de7"),
+        "title" : "Desodorante natural",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg",
+        "price" : 1700,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de8"),
+        "title" : "Crema para la ducha",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg",
+        "price" : 2300,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de9"),
+        "title" : "Serum Facial",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg",
+        "price" : 2860,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dea"),
+        "title" : "Crema Gel Hidratante",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg",
+        "price" : 3350,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57deb"),
+        "title" : "Bruma",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg",
+        "price" : 4320,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dec"),
+        "title" : "Leche de Limpieza",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg",
+        "price" : 4990,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730f0be3652675d0b57df7"),
+        "title" : "Jabonera",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/05/jabonera-redonda-x1-2-min-600x600.jpg",
+        "price" : 650,
+        "stock" : 100
+}
+
+
+> db.productos.updateMany({price: {$gt: 4000}},{$set: {stock: 0}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de3"),
+        "title" : "Jabon solido",
+        "thumbnail" : "https://nurbotanicals.com/67-large_default/n05-cinnamon-argan-.jpg",
+        "price" : 120,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de4"),
+        "title" : "Jabon liquido",
+        "thumbnail" : "https://elblogverde.com/wp-content/uploads/2016/06/como-hacer-jabon-liquido-galeria-2.jpg",
+        "price" : 580,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de5"),
+        "title" : "Shampoo Solido",
+        "thumbnail" : "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2020/07/10/shampoo-solido.jpg?itok=Hs14Y5ry",
+        "price" : 900,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de6"),
+        "title" : "Acondicionador Solido",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg",
+        "price" : 1280,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de7"),
+        "title" : "Desodorante natural",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg",
+        "price" : 1700,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de8"),
+        "title" : "Crema para la ducha",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg",
+        "price" : 2300,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de9"),
+        "title" : "Serum Facial",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg",
+        "price" : 2860,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dea"),
+        "title" : "Crema Gel Hidratante",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg",
+        "price" : 3350,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57deb"),
+        "title" : "Bruma",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg",
+        "price" : 4320,
+        "stock" : 0
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dec"),
+        "title" : "Leche de Limpieza",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg",
+        "price" : 4990,
+        "stock" : 0
+}
+{
+        "_id" : ObjectId("62730f0be3652675d0b57df7"),
+        "title" : "Jabonera",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/05/jabonera-redonda-x1-2-min-600x600.jpg",
+        "price" : 650,
+        "stock" : 100
+}
+
+
+> db.productos.deleteMany({price: {$lt: 1000}})
+{ "acknowledged" : true, "deletedCount" : 4 }
+
+
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de6"),
+        "title" : "Acondicionador Solido",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg",
+        "price" : 1280,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de7"),
+        "title" : "Desodorante natural",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg",
+        "price" : 1700,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de8"),
+        "title" : "Crema para la ducha",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg",
+        "price" : 2300,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57de9"),
+        "title" : "Serum Facial",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg",
+        "price" : 2860,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dea"),
+        "title" : "Crema Gel Hidratante",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg",
+        "price" : 3350,
+        "stock" : 100
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57deb"),
+        "title" : "Bruma",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg",
+        "price" : 4320,
+        "stock" : 0
+}
+{
+        "_id" : ObjectId("62730bb8e3652675d0b57dec"),
+        "title" : "Leche de Limpieza",
+        "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg",
+        "price" : 4990,
+        "stock" : 0
+}
+
+-----------------------------------------------------------------
+> use admin
+switched to db admin
+> db.createUser({
+... user: "pepe",
+... pwd: "asd456",
+... roles: [
+... {role: "read",
+... db: "ecommerce"}
+... ]
+... })
+Successfully added user: {
+        "user" : "pepe",
+        "roles" : [
+                {
+                        "role" : "read",
+                        "db" : "ecommerce"
+                }
+        ]
+}
+
+> show dbs
+admin      0.000GB
+config     0.000GB
+ecommerce  0.000GB
+local      0.000GB
+> use admin
+switched to db admin
+> show collections
+system.users
+system.version
+> db.system.users.find().pretty()
+{
+        "_id" : "admin.pepe",
+        "userId" : UUID("f7c47316-85bd-45f1-820c-e093436b7fde"),
+        "user" : "pepe",
+        "db" : "admin",
+        "credentials" : {
+                "SCRAM-SHA-1" : {
+                        "iterationCount" : 10000,
+                        "salt" : "Vu6jtLYCJjhzRx7DxuTPQA==",
+                        "storedKey" : "cUbaNl8faRvllbV8nB0NUbBoVoU=",
+                        "serverKey" : "MZBpH2s8bEbfndbCbaPGzojPbds="
+                },
+                "SCRAM-SHA-256" : {
+                        "iterationCount" : 15000,
+                        "salt" : "sBjPYnjkv3n8fjCAWcw1U6aEJxAU8VXR7gRPKA==",
+                        "storedKey" : "n9PTxTAWfaldgdr6lbdtqsoVmWNHZc4mJASgmFQrc1s=",
+                        "serverKey" : "nWPMfYMwJhMAFsOglkRR1gKwwNxoA55erXBUgn4QkIk="
+                }
+        },
+        "roles" : [
+                {
+                        "role" : "read",
+                        "db" : "ecommerce"
+                }
+        ]
+}
+
+C:\Windows\System32>mongo -u "pepe" -p "asd456"
+MongoDB shell version v5.0.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("0f7739fd-e33c-4e4e-bdf7-2a08ecc3e0f4") }
+MongoDB server version: 5.0.8
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+> show dbs
+ecommerce  0.000GB
+> use ecommerce
+switched to db ecommerce
+> db.productos.find()
+{ "_id" : ObjectId("62730bb8e3652675d0b57de6"), "title" : "Acondicionador Solido", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/02/acond-yellow.jpg", "price" : 1280, "stock" : 100 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57de7"), "title" : "Desodorante natural", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2018/07/desodorante-1.jpg", "price" : 1700, "stock" : 100 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57de8"), "title" : "Crema para la ducha", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2021/12/red-velvet-01-min-1-600x600.jpeg", "price" : 2300, "stock" : 100 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57de9"), "title" : "Serum Facial", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/serum-e-commerce.jpeg", "price" : 2860, "stock" : 100 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57dea"), "title" : "Crema Gel Hidratante", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/cremae-commerce.jpeg", "price" : 3350, "stock" : 100 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57deb"), "title" : "Bruma", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/bruma-e-commerce.jpeg", "price" : 4320, "stock" : 0 }
+{ "_id" : ObjectId("62730bb8e3652675d0b57dec"), "title" : "Leche de Limpieza", "thumbnail" : "https://www.ruhnatural.com/wp-content/uploads/2022/04/leche-e-commerce.jpeg", "price" : 4990, "stock" : 0 }
+>
+
+
+> db.productos.insert({title: "Jabon Natural Solido", thumbnail: "www.img.com", price: 670})
+WriteCommandError({
+        "ok" : 0,
+        "errmsg" : "not authorized on ecommerce to execute command { insert: \"productos\", ordered: true, lsid: { id: UUID(\"0f7739fd-e33c-4e4e-bdf7-2a08ecc3e0f4\") }, $db: \"ecommerce\" }",
+        "code" : 13,
+        "codeName" : "Unauthorized"
+})

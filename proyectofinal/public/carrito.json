@@ -1,0 +1,128 @@
+[
+  {
+    "id": "000000",
+    "timestamp": "000000",
+    "productos": {
+      "id": "000000",
+      "timestamp": "000000",
+      "nombre": "000000",
+      "descripcion": "000000",
+      "codigo": 0,
+      "foto": "000000",
+      "precio": 0,
+      "stock": 0,
+      "cantidad": 0
+    }
+  },
+  {
+    "id": "062166d7-530e-4107-b378-f15d43bba53f",
+    "timestamp": "2022-04-21 14:46:16:965000 (April Thursday 21st)",
+    "productos": [
+      {
+        "id": "3",
+        "timestamp": "123456",
+        "nombre": "Rulo Bear Documentary",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam perferendis iste delectus esse cupiditate! Quas dolorum, sapiente quo doloribus aspernatur possimus deserunt reiciendis sed laboriosam cupiditate accusantium maxime? Vitae, totam!",
+        "codigo": 456456,
+        "foto": "https://i.ytimg.com/vi/ouYE8dncaCQ/maxresdefault.jpg",
+        "precio": 120,
+        "stock": 50,
+        "cantidad": 3
+      },
+      {
+        "id": "f2b794d1-e2f4-41d9-811e-15e6e6717002",
+        "timestamp": "2022-04-19 02:21:15:450000 (April Tuesday 19th)",
+        "nombre": "A Burns for All Seasons",
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veritatis non deserunt omnis voluptates voluptatum, dignissimos, officia excepturi quis, quos voluptatem eaque necessitatibus. Molestiae excepturi accusamus cupiditate impedit cum ex!",
+        "codigo": 753753753753,
+        "foto": "https://i.ytimg.com/vi/O7SLvz1xg18/maxresdefault.jpg",
+        "precio": 120,
+        "stock": 20,
+        "cantidad": 3
+      },
+      {
+        "id": "1",
+        "timestamp": "123456",
+        "nombre": "Juanito y los clonosaurios",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam perferendis iste delectus esse cupiditate! Quas dolorum, sapiente quo doloribus aspernatur possimus deserunt reiciendis sed laboriosam cupiditate accusantium maxime? Vitae, totam!",
+        "codigo": 456456,
+        "foto": "https://d3ugyf2ht6aenh.cloudfront.net/stores/978/055/products/juanito-y-los-clonosaurios1-4836e2dbaa49b4524015233737439827-640-0.jpg",
+        "precio": 100,
+        "stock": 50,
+        "cantidad": 4
+      },
+      {
+        "id": "04fb933d-a6d6-424f-9e68-3e709cc11e2b",
+        "timestamp": "2022-04-19 12:09:57:522000 (April Tuesday 19th)",
+        "nombre": "Mi nombre es Barney Gomez",
+        "descripcion": "Barney (al igual que varios personajes de la serie Los Simpson) es todo una incógnita. De primera impresión uno podría pensar que no tiene ningún talento especial, pero en la quinta temporada con el episodio ‘Homer’s Barbershop Quartet’ queda totalmente refutado. En este episodio Homer cuenta a Bart y Lisa la historia de su grupo llamado ‘The Be Sharps’ (en Latinoamerica Los Borbotones, en España los Solfamidas) en el que uno de los integrantes (y el de mejor voz) era Barney, lo integran al grupo luego de que el Jefe Clancy Wiggum fuera expulsado del grupo. Lo descubren en la taberna mientras cantaba en el suelo del baño buscando “su mondadientes”. Más aún, esto se reafirma en el episodio ‘A Star is Burns’ cuando presenta un corto que trata sobre su ebriedad, el jurado queda impresionado porque era realmente una obra de arte, en el episodio cuando Homer era artista este le paga a Moe con un autógrafo, Barney le dice a Moe si le puede pagar con un dibujo, pero él se niega. Cuando muestran el dibujo se observa que era una verdadera obra de arte.",
+        "codigo": 1346789599066,
+        "foto": "https://i.ytimg.com/vi/lhutNrQ3vyc/hqdefault.jpg",
+        "precio": 125,
+        "stock": 15,
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "id": "bce8c556-8244-4cce-beda-70272ae807f1",
+    "timestamp": "2022-05-08 14:24:36:987000 (May Sunday 8th)",
+    "productos": []
+  },
+  {
+    "id": "c722ffde-ca54-4abb-9478-b2619277aba3",
+    "timestamp": "2022-05-08 14:29:46:372000 (May Sunday 8th)",
+    "productos": []
+  },
+  {
+    "id": "c8a5eab7-0033-4971-8a9e-7b747657513d",
+    "timestamp": "2022-05-09 12:27:41:459000 (May Monday 9th)",
+    "productos": [
+      {
+        "id": "1",
+        "timestamp": "123456",
+        "nombre": "Juanito y los clonosaurios",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam perferendis iste delectus esse cupiditate! Quas dolorum, sapiente quo doloribus aspernatur possimus deserunt reiciendis sed laboriosam cupiditate accusantium maxime? Vitae, totam",
+        "codigo": 456456,
+        "foto": "https://d3ugyf2ht6aenh.cloudfront.net/stores/978/055/products/juanito-y-los-clonosaurios1-4836e2dbaa49b4524015233737439827-640-0.jpg",
+        "precio": 100,
+        "stock": 50,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": "f32866ab-661e-4b02-91bc-980b6bf8e5f7",
+    "timestamp": "2022-05-10 00:17:23:034000 (May Tuesday 10th)",
+    "productos": [
+      {
+        "id": "1",
+        "timestamp": "123456",
+        "nombre": "Juanito y los clonosaurios",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam perferendis iste delectus esse cupiditate! Quas dolorum, sapiente quo doloribus aspernatur possimus deserunt reiciendis sed laboriosam cupiditate accusantium maxime? Vitae, totam!",
+        "codigo": 456456,
+        "foto": "https://d3ugyf2ht6aenh.cloudfront.net/stores/978/055/products/juanito-y-los-clonosaurios1-4836e2dbaa49b4524015233737439827-640-0.jpg",
+        "precio": 100,
+        "stock": 50,
+        "cantidad": 3
+      }
+    ]
+  },
+  {
+    "id": "f7081f10-f149-4296-8137-5f2fdbec49a6",
+    "timestamp": "2022-05-10 20:34:02:700000 (May Tuesday 10th)",
+    "productos": [
+      {
+        "id": "350c63bf-6cb8-485f-8647-12bf1cc59383",
+        "timestamp": "2022-05-10 18:18:28:689000 (May Tuesday 10th)",
+        "nombre": "Alicia salió por el parabrisas",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam perferendis iste delectus esse cupiditate! Quas dolorum, sapiente quo doloribus aspernatur possimus deserunt reiciendis sed laboriosam cupiditate accusantium maxime? Vitae, totam!",
+        "codigo": 456456,
+        "foto": "https://i.ytimg.com/vi/RU4cNiDB64s/mqdefault.jpg",
+        "precio": 50,
+        "stock": 50,
+        "cantidad": 1
+      }
+    ]
+  }
+]

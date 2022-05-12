@@ -15,7 +15,7 @@ class Contenedor{
             let resp = await knex('productos').insert(producto)
             return resp
         } catch (error) {
-             throw new Error('No se pudo guardar el producto')
+            throw new Error('No se pudo guardar el producto')
         }
 
     }
@@ -40,8 +40,8 @@ class Contenedor{
     async deleteById(id){
         if (this.getById(id)) {
             try {
-               let data = await knex.del().from('productos').where('id', id)
-               return data
+                let data = await knex.del().from('productos').where('id', id)
+                return data
             } catch (error) {
                 throw new Error('No se pudo eliminar el producto')
             }
@@ -62,9 +62,9 @@ class Contenedor{
         try {
             let resp = knex('productos').where('id', id).update(body)
             return resp
-       } catch (error) {
-           throw new Error('No se pudo actualizar el producto')
-       }
+        } catch (error) {
+            throw new Error('No se pudo actualizar el producto')
+        }
     }
 }
 
