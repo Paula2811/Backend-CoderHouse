@@ -1,30 +1,24 @@
-// Express
-import express from 'express'
-import dotenv from 'dotenv'
-import router from './api/api.js'
+import express from 'express';
+import  carritoRouter from'./src/routes/rutaCarrito.js'
+import productosRouter from'./src/routes/rutaProductos.js'
+import cors from 'cors';
+export const app = express();
 
-const app = express()
-dotenv.config()
+app.use(cors())
 
-// Variable Global de permiso de Usuario
-global.userLogin = 0
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Config
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use('/api/productos', productosRouter);
+app.use('/api/carrito', carritoRouter);
 
-// Config Public
-app.use(express.static('public'))
-
-// Router/Api
-router(express, app)
-
-//? Server ========================================
-
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () => {
-    console.log(`Oyendo desde ${server.address().port} - http://localhost:${PORT}`)
-})
-server.on('error', error => console.log('ha habido un error: ', error))
+    console.log(`Server is running on port: ${server.address().port}`);
+});
+server.on('error', error => console.log(`error running server: ${error}`));
+
+
 
