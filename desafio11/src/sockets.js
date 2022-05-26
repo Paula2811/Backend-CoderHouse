@@ -1,7 +1,4 @@
-import Chat from './models/Chat'
 import { saveMsjs, getMsjs } from './models/Chat'
-
-
 
 export default (io)=>{
     io.on('connection', async (socket)=>{
@@ -14,7 +11,5 @@ export default (io)=>{
         })
     
         socket.emit ('mensajes', await getMsjs());
-
-        
     })
 }
