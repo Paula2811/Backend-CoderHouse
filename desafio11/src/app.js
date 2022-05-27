@@ -65,7 +65,7 @@ app.get('/getUserName', (req, res) => {
         console.log(err);
     }
 })
-//recupero el nombr de usuario por env
+
 app.get('/getUserNameEnv', (req, res) => {
     const user = process.env.USER;
     res.send({
