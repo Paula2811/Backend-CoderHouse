@@ -13,6 +13,7 @@ import routerProducto from './routes/routes.js'
 import controllerApp from './controller/controllerApp'
 
 
+
 const app = express()
 const LocalStrategy = passportLocal.Strategy;
 app.use(cookieParser())
@@ -20,9 +21,10 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json());
 app.use(express.urlencoded({
-    extended: true
+    extended: false
 }));
 app.use('/api/', routerProducto);
+
 
 app.use(session({
     store: MongoStore.create({
@@ -46,20 +48,22 @@ app.use(passport.session());
 
 passport.use('login', new LocalStrategy(
     (username, password, done) => {
-        usuario.findOne({username},(err, user) => {
-            if(err) return done(err);
+        usuario.findOne({
+            username
+        }, (err, user) => {
+            if (err) return done(err);
 
-            if(!user){
-                console.log("User not found "+ username);
-                return done(null,false)
+            if (!user) {
+                console.log("User not found " + username);
+                return done(null, false)
             }
             const isValidPassword = bcrypt.compareSync(password, user.password)
-            if(!isValidPassword){
+            if (!isValidPassword) {
                 console.log("Invalid password")
-                return done(null,false)
+                return done(null, false)
             }
 
-            return done(null,user)
+            return done(null, user)
         })
     }
 ))
@@ -99,7 +103,7 @@ passport.use('signup', new LocalStrategy({
 
 function createHash(password) {
     return bcrypt.hashSync(
-        password, 
+        password,
         bcrypt.genSaltSync(10),
         null
     )
@@ -128,14 +132,18 @@ app.get('/logoutMensaje', (req, res) => {
 //LOGIN
 app.get('/', controllerApp.getLogin)
 app.post('/login', passport.authenticate('login', {
-    failureRedirect: '/faillogin'
+    successRedirect: '/',
+    failureRedirect: '/faillogin',
+    passReqToCallback: true
 }), controllerApp.postLogin)
 app.get('/faillogin', controllerApp.getFailLogin)
 
 //SIGNUP
 app.get('/signup', controllerApp.getSignup)
 app.post('/signup', passport.authenticate('signup', {
-    failureRedirect: '/failsignup'
+    successRedirect: '/login',
+    failureRedirect: '/failsignup',
+    passReqToCallback: true
 }), controllerApp.postSignup)
 app.get('/failsignup', controllerApp.getFailSignup)
 
